@@ -1,12 +1,21 @@
 # ethers cheat sheet
+- https://www.npmjs.com/package/ethers
 
+<br><br>
 
 # Docs
 - https://docs.ethers.org
 
 
 
-## Connecting to Ethereum
+<br><br>
+<br><br>
+_____________________________________________
+_____________________________________________
+<br><br>
+<br><br>
+
+# Connecting to Ethereum
 - https://docs.ethers.org/v6/getting-started/#starting-connecting
 - The quickest and easiest way to experiment and begin developing on Ethereum is to use MetaMask, which is a browser extension that injects objects into the window, providing:
 
@@ -44,6 +53,14 @@ if (window.ethereum == null) {
 
 
 
+
+
+
+
+
+
+
+
 <br><br>
 <br><br>
 ___________________________________________
@@ -52,7 +69,24 @@ ___________________________________________
 <br><br>
 
 ## Provider
+- Ethers works closely with an ever-growing list of third-party providers to ensure getting started is quick and easy, by providing default keys to each service.
 
+These built-in keys mean you can use ethers.getDefaultProvider() and start developing right away.
+
+However, the API keys provided to ethers are also shared and are intentionally throttled to encourage developers to eventually get their own keys, which unlock many other features, such as faster responses, more capacity, analytics and other features like archival data.
+
+When you are ready to sign up and start using for your own keys, please check out the Provider API Keys in the documentation.
+- https://docs.ethers.org/v5/api-keys/
+
+- A special thanks to these services for providing community resources:
+  - Ankr
+  - QuickNode
+  - Etherscan
+  - INFURA
+  - Alchemy
+
+
+<br><br>
 <br><br>
 
 ### jsonrpc-provider
