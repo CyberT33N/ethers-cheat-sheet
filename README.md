@@ -1,4 +1,4 @@
-# ethers-cheat-sheet
+# ethers cheat sheet
 
 
 # Docs
@@ -61,6 +61,9 @@ ___________________________________________
 <br><br>
 
 ### Custom RPC Backend
+- Check here how to setup local
+  - https://github.com/CyberT33N/lodestar-cheat-sheet/blob/main/README.md#quickstart-scripts
+
 - If you are running your own Ethereum node (e.g. Geth) or using a custom third-party service (e.g. INFURA), you can use the JsonRpcProvider directly, which communicates using the link-jsonrpc protocol.
 
 When using your own Ethereum node or a developer-base blockchain, such as Hardhat or Ganache, you can get access to the accounts with JsonRpcProvider-getSigner.
