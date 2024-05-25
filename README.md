@@ -110,3 +110,61 @@ provider = new ethers.JsonRpcProvider(url)
 signer = await provider.getSigner()
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+___________________________________________
+___________________________________________
+<br><br>
+<br><br>
+
+# Contracts
+- https://docs.ethers.org/v6/getting-started/#starting-contracts
+- A Contract is a meta-class, which means that its definition is derived at run-time, based on the ABI it is passed, which then determined what methods and properties are available on it.
+- Since all operations that occur on the blockchain must be encoded as binary data, we need a concise way to define how to convert between common objects (like strings and numbers) and its binary representation, as well as encode the ways to call and interpret the Contract.
+
+For any method, event or error you wish to use, you must include a Fragment to inform Ethers how it should encode the request and decode the result.
+
+Any methods or events that are not needed can be safely excluded.
+
+There are several common formats available to describe an ABI. The Solidity compiler usually dumps a JSON representation but when typing an ABI by hand it is often easier (and more readable) to use the human-readable ABI, which is just the Solidity signature.
+
+<br><br>
+
+## UniswapV3Factory
+```javascript
+import { ethers } from 'ethers';
+
+import UniswapV3Factory from '@uniswap/v3-core/artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json' with { type: "json" }
+
+const { abi } = UniswapV3Factory
+
+// Default third party provider
+const provider = ethers.getDefaultProvider()
+// Custom provider
+// const provider =  new ethers.JsonRpcProvider('http://localhost:8551')
+
+// Erstellen eines Vertrags für die Uniswap V3 Factory
+const factoryAddress = '0x1F98431Ab5cddB0572e6d72020f4a913956F1C04';
+const factoryContract = new ethers.Contract(factoryAddress, abi, provider)
+```
